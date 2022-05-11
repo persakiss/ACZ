@@ -11,6 +11,11 @@ app.get('/', (req, res) => {
     res.render('index', { text: 'Thanks for stopping by!'})
 })
 
+
+const userRouter = require('./routes/users')
+
+app.use('/users', userRouter)
+
 app.listen(port)
 
 

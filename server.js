@@ -8,7 +8,7 @@ app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
     console.log('Here')
-    res.render('index')
+    res.render('index', { text: 'Thanks for stopping by!'})
 })
 
 app.listen(port)

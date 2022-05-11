@@ -4,8 +4,8 @@
   "description": "Working on my personal website",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "devStart": "nodemon server.js"
+    },
   "author": "",
   "license": "ISC",
   "dependencies": {

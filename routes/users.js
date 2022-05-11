@@ -10,33 +10,57 @@ const router = express.Router()
 router.use(userLogger)
 
 router.get('/', (req, res) => {
+    // To deal with queries (url)
+    console.log(req.query.name)
+    // ^^^^^^^^^^^^^^^^^^^^^^^^^^
     res.send("User List")
 })
 
 router.get('/new', (req, res) => {
-    res.send("User New Form")
+    // res.send("User New Form")
+    res.render("users/new", { firstName: "Test" })
 })
 
 
 
 router.post('/', (req, res) => {
-    res.send('Create User')
+    // res.send('Create User')
+    const isValid = true
+    if(isValid) {
+        // Add user to array
+        users.push({ firstName: req.body.firstName })
+        // Forward user to the get page, the array minus one
+        res.redirect(`/users/${users.length - 1}`)
+    } else {
+        console.log("Error")
+        // Pass down the first name they tried to create this with
+        // if invalid, puts it back in the form on the same page
+        // this works through interpolation from new.pug and users.js
+        res.render('users/new', {firstName: req.body.firstName })
+    }
+    //////////////////////////////////
+    // console.log(req.body.firstName) // by default express 
+    // doesn't allow us to access the body, so we have to
+    // use middleware to make the above log code work
+    // in server.js app.use(express.urlencoded())
+    res.send("Hi!")
 })
 
 // Dynamic parameter starts with :
 // For getting an individual user 
 
-router.route("/:id")
-.get((req, res) => {
-    // console.log(req.user)
-    res.send(`Get User With ID ${req.params.id}`)
-})
-.put((req, res) => {
-    res.send(`Put User With ID ${req.params.id}`)
-})
-.delete((req, res) => {
-    res.send(`Delete User With ID ${req.params.id}`)
-})
+router
+    .route("/:id")
+    .get((req, res) => {
+        console.log(req.user)
+        res.send(`Get User With ID ${req.params.id}`)
+    })
+    .put((req, res) => {
+        res.send(`Put User With ID ${req.params.id}`)
+    })
+    .delete((req, res) => {
+        res.send(`Delete User With ID ${req.params.id}`)
+    })
 
 
 /*

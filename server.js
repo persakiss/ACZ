@@ -20,6 +20,10 @@ app.get('/', logger, (req, res) => {
 
 // Serve static files from public folder
 app.use(express.static("public"))
+// Access the body, information coming from forms
+app.use(express.urlencoded({ extender: true }))
+// To deal with JSON information
+app.use(express.json())
 
 
 const userRouter = require('./routes/users')

@@ -4,9 +4,9 @@ const port = 3000
 
 app.set('view engine', 'pug')
 
-// Render is done top-to-bottom, so placement is key.
-// If you have middleware (eg logger) to use everywhere,
-// Define it at the top.
+//// Render is done top-to-bottom, so placement is key.
+//// If you have middleware (eg logger) to use everywhere,
+//// Define it at the top.
 // app.use(logger) 
 
 
@@ -16,6 +16,10 @@ app.get('/', logger, (req, res) => {
     // console.log('Here')
     res.render('index', { text: 'Thanks for stopping by!'})
 })
+
+
+// Serve static files from public folder
+app.use(express.static("public"))
 
 
 const userRouter = require('./routes/users')

@@ -1,5 +1,8 @@
 const express = require("express")
 const router = express.Router()
+const fs = require('fs')
+
+var users = require('./users.json')
 
 // Routes are read from top to bottom,
 // so make sure you're declaring in order
@@ -11,7 +14,7 @@ router.use(userLogger)
 
 router.get('/', (req, res) => {
     // To deal with queries (url)
-    console.log(req.query.name)
+    console.log("Get log: " + req.query.name)
     // ^^^^^^^^^^^^^^^^^^^^^^^^^^
     res.send("User List")
 })
@@ -29,8 +32,9 @@ router.post('/', (req, res) => {
     if(isValid) {
         // Add user to array
         users.push({ firstName: req.body.firstName })
+        /////////////////////
         // Forward user to the get page, the array minus one
-        res.redirect(`/users/${users.length - 1}`)
+        res.redirect(`/users/${users.length}`)
     } else {
         console.log("Error")
         // Pass down the first name they tried to create this with
@@ -55,7 +59,7 @@ router.post('/', (req, res) => {
 router
     .route("/:id")
     .get((req, res) => {
-        console.log(req.user)
+        console.log("Router get log: " + req.user)
         res.send(`Get User With ID ${req.params.id}, <br \> Users: ${JSON.stringify(users)}`)
     })
     .put((req, res) => {
@@ -85,7 +89,6 @@ router.delete('/:id', (req, res) => {
 }) 
 */
 
-const users = [{ firstName: "Dino" }, { firstName: "Sabrina" }, { firstName: "Arman"}]
 
 // param is a type of middleware, stuff that runs
 // betwene the request and the response.

@@ -43,7 +43,10 @@ router.post('/', (req, res) => {
     // doesn't allow us to access the body, so we have to
     // use middleware to make the above log code work
     // in server.js app.use(express.urlencoded())
-    res.send("Hi!")
+    //////////////////////////////////
+    // Commenting below because get the error
+    // "Cannot set headers after they are sent to the client"
+    // res.send("Hi!")
 })
 
 // Dynamic parameter starts with :
@@ -53,7 +56,7 @@ router
     .route("/:id")
     .get((req, res) => {
         console.log(req.user)
-        res.send(`Get User With ID ${req.params.id}`)
+        res.send(`Get User With ID ${req.params.id}, <br \> Users: ${JSON.stringify(users)}`)
     })
     .put((req, res) => {
         res.send(`Put User With ID ${req.params.id}`)
@@ -82,7 +85,7 @@ router.delete('/:id', (req, res) => {
 }) 
 */
 
-const users = [{ name: "Dino" }, { name: "Sabrina" }, { name: "Arman"}]
+const users = [{ firstName: "Dino" }, { firstName: "Sabrina" }, { firstName: "Arman"}]
 
 // param is a type of middleware, stuff that runs
 // betwene the request and the response.

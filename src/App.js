@@ -10,6 +10,7 @@ function App() {
       <Greeting name="Guest" />
       <Contact />
       <Button />
+      <Talker />
     </div>
   );
 }

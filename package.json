@@ -1,29 +1,38 @@
 {
   "name": "arman.cz",
-  "version": "1.0.0",
-  "description": "Working on my personal website",
-  "main": "index.html",
-  "scripts": {
-    "devStart": "nodemon server.js"
-  },
-  "author": "",
-  "license": "ISC",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "bootstrap": "^4.5.2",
-    "express": "^4.18.1",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
-    "pug": "^3.0.2"
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/persakiss/ACZ.git"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "bugs": {
-    "url": "https://github.com/persakiss/ACZ/issues"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "homepage": "https://github.com/persakiss/ACZ#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.16"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

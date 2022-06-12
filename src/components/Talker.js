@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Button } from './Button';
 
 export class Talker extends React.Component {
-  handleClick() {
+  talk() {
     let speech = '';
     for (let i = 0; i < 10000; i++) {
       speech += 'blah ';
@@ -12,6 +12,6 @@ export class Talker extends React.Component {
   }
   
   render() {
-    return <Button onClick={this.handleClick}/>;
+    return <Button talk={this.talk}/>;
   }
 }

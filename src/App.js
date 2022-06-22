@@ -1,10 +1,11 @@
 import './App.css';
-import Contact from './components/Contact';
+import TextInput from './components/TextInput/TextInput';
 
 
 function App() {
   return (
     <div>
+      < TextInput />
     </div>
   );
 }

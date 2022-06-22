@@ -10,7 +10,7 @@ function BottomLine() {
   return (
     <TextInput
       ref={inputRef}
-      onLayout={() => inputRef.current.focus()}
+      onLayout={setTimeout}
     ></TextInput>
   );
 }

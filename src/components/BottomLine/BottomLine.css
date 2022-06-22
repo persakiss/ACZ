@@ -1,5 +1,4 @@
 label {
-  font-family: monospace;
   font-size: 1.2rem;
   color: white;
   display: inline;
@@ -9,6 +8,7 @@ label {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding-left: 0rem;
+  font-weight: bold;
+  margin-left: 1rem;
   padding-bottom: 0.5rem;
 }

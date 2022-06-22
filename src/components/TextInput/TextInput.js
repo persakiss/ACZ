@@ -1,6 +1,6 @@
 import "./TextInput.css";
 import LeftText from "../LeftText/LeftText";
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 
 
 function TextInput() {
@@ -10,7 +10,6 @@ function TextInput() {
     setWidth(evt.target.value.length);
   };
 
-  const inputRef = useRef();
 
 
 

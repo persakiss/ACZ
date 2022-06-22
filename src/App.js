@@ -1,11 +1,11 @@
 import './App.css';
-import TextInput from './components/TextInput/TextInput';
+import BottomLine from './components/BottomLine/BottomLine';
 
 
 function App() {
   return (
     <div>
-      < TextInput />
+      <BottomLine />
     </div>
   );
 }

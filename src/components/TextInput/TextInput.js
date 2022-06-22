@@ -1,24 +1,38 @@
-import React from 'react';
-import './TextInput.css';
-import { useRef, useState } from 'react';
+import "./TextInput.css";
+import LeftText from "../LeftText/LeftText";
+import React, { useRef, useState } from 'react'
+
 
 function TextInput() {
-
   const [width, setWidth] = useState(0);
-  
-  const changeHandler = evt => {
+
+  const changeHandler = (evt) => {
     setWidth(evt.target.value.length);
   };
 
-function resizeInput() {
-  this.style.width = this.value.length + "ch";
-}
+  const inputRef = useRef();
+
+
+
 
   return (
     <div id="bottom">
-      <span p>armn@armn.ca &gt;</span>  <input type="text" style={{ width: width +'ch'}} autoFocus onFocus="this.select()" onChange={changeHandler}></input> <span className='blinking'>_</span>
+      <LeftText />
+      <input
+        type="text"
+        style={{ width: width + "ch" }}
+        autoFocus
+        onFocus="this.select()"
+        onChange={changeHandler}
+        id="console"
+        spellcheck="false"
+        autoComplete="false"
+        name="hidden"
+      >
+      </input>
+      <span className="blinking">_</span>
     </div>
-  )
+  );
 }
 
-export default TextInput
+export default TextInput;

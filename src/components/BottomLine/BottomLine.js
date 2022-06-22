@@ -2,16 +2,13 @@ import React, { useRef } from "react";
 import TextInput from "../TextInput/TextInput";
 
 function BottomLine() {
-
   const inputRef = useRef();
-  setTimeout(() => inputRef.current.focus(), 400)
-
+  setTimeout(() => inputRef.current.focus(), 1000);
 
   return (
-    <TextInput
-      ref={inputRef}
-      onLayout={setTimeout}
-    ></TextInput>
+    <label for="console">
+      <TextInput ref={inputRef} onLayout={setTimeout} />
+    </label>
   );
 }
 

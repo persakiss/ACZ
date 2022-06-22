@@ -4,7 +4,7 @@ import TextInput from "../TextInput/TextInput";
 function BottomLine() {
 
   const inputRef = useRef();
-  setTimeout(() => inputRef.current.focus(), 100)
+  setTimeout(() => inputRef.current.focus(), 400)
 
 
   return (

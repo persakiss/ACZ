@@ -1,7 +1,5 @@
 import "./TextInput.css";
-import LeftText from "../LeftText/LeftText";
-import React, { useState } from 'react'
-
+import React, { useState } from "react";
 
 function TextInput() {
   const [width, setWidth] = useState(0);
@@ -10,13 +8,8 @@ function TextInput() {
     setWidth(evt.target.value.length);
   };
 
-
-
-
-
   return (
-    <div id="bottom">
-      <LeftText />
+    <>
       <input
         type="text"
         style={{ width: width + "ch" }}
@@ -27,10 +20,9 @@ function TextInput() {
         spellcheck="false"
         autoComplete="false"
         name="hidden"
-      >
-      </input>
+      ></input>
       <span className="blinking">_</span>
-    </div>
+    </>
   );
 }
 

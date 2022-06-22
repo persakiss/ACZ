@@ -20,3 +20,7 @@ body {
 	width: 100%;
 }
 
+div {
+	display: inline;
+}
+

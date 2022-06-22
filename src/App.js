@@ -3,6 +3,8 @@ import BottomLine from './components/BottomLine/BottomLine';
 
 
 function App() {
+  
+
   return (
     <div>
       <BottomLine />

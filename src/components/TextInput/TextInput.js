@@ -16,7 +16,7 @@ function resizeInput() {
 
   return (
     <div id="bottom">
-      <span p>arman@armn.ca &gt;</span>  <input type="text" style={{ width: width +'ch'}} autoFocus onFocus="this.select()" onChange={changeHandler}></input> <span className='blinking'>_</span>
+      <span p>armn@armn.ca &gt;</span>  <input type="text" style={{ width: width +'ch'}} autoFocus onFocus="this.select()" onChange={changeHandler}></input> <span className='blinking'>_</span>
     </div>
   )
 }

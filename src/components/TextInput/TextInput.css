@@ -6,6 +6,7 @@ span {
 
 .blinking {
   animation: blinker 1s linear infinite;
+  margin-left: -10px;
 }
 
 @keyframes blinker {

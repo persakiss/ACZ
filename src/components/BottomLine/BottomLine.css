@@ -2,6 +2,7 @@ label {
   font-family: monospace;
   font-size: 1.2rem;
   color: white;
+  display: inline;
 }
 
 #bottom {

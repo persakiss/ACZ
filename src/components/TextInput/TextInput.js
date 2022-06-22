@@ -20,7 +20,8 @@ function TextInput() {
         spellcheck="false"
         autoComplete="false"
         name="hidden"
-      ></input>
+      >
+      </input>
       <span className="blinking">_</span>
     </>
   );

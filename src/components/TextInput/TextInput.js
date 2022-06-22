@@ -19,9 +19,12 @@ function TextInput() {
         spellCheck="false"
         autoComplete="false"
         name="hidden"
-      >
-      </input>
-      <span className="blinking">_</span>
+        onKeyPress={(e) => {
+          if (e.key === "Enter") {
+            console.log("works");
+          }
+        }}
+      ></input>
     </>
   );
 }

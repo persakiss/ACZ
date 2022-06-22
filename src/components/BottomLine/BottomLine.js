@@ -6,7 +6,7 @@ import './BottomLine.css';
 function BottomLine() {
 
   return (
-    <label id="bottom" for="console">
+    <label id="bottom" htmlFor="console">
       <LeftText />
       <TextInput />
     </label>

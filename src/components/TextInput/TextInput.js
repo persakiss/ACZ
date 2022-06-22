@@ -14,10 +14,9 @@ function TextInput() {
         type="text"
         style={{ width: width + "ch" }}
         autoFocus
-        onFocus="this.select()"
         onChange={changeHandler}
         id="console"
-        spellcheck="false"
+        spellCheck="false"
         autoComplete="false"
         name="hidden"
       >
